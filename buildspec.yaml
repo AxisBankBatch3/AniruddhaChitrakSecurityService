@@ -30,5 +30,5 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
 artifacts:
   files:
-    - target/orchestration-assets.jar
+    - target/security.jar
   discard-paths: yes
