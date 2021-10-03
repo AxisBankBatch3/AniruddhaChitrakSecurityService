@@ -19,14 +19,14 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:latest .
+      - docker build -t 401227757136.dkr.ecr.ap-south-1.amazonaws.com/insurance-security:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
       - echo Build completed successfully
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push $REPOSITORY_URI:latest
+      - docker push 401227757136.dkr.ecr.ap-south-1.amazonaws.com/insurance-security:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
 artifacts:
   files:
